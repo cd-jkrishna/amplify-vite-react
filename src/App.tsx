@@ -14,6 +14,10 @@ export default function TodoList() {
 
   useEffect(() => {
     console.log("ddd")
+    
+client.queries.sayHello({
+  name: "Amplify",
+})
     fetchTodos();
   }, []);
 
