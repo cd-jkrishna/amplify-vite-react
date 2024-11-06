@@ -15,7 +15,7 @@ export default function TodoList() {
   useEffect(() => {
     console.log("ddd")
     
-
+client.queries.sayHello({name:"hdhdhd"})
     fetchTodos();
   }, []);
 
@@ -23,6 +23,7 @@ export default function TodoList() {
     await client.models.Todo.create({
       content: window.prompt("Todo content?"),
       isDone: false,
+      isFinal:"yes"
     });
 
     fetchTodos();
