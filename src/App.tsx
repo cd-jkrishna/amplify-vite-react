@@ -15,7 +15,7 @@ export default function TodoList() {
   useEffect(() => {
     console.log("ddd")
     
-client.queries.sayHello({name:"hdhdhd"})
+//client.queries.sayHello({name:"hdhdhd"})
     fetchTodos();
   }, []);
 
