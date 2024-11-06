@@ -5,7 +5,7 @@ const schema = a.schema({
   Todo: a.model({
       content: a.string(),
       isDone: a.boolean(),
-      isDone1:a.string()
+      isDone1: a.string()
     }),
 
     sayHello: a
