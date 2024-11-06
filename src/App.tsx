@@ -13,6 +13,7 @@ export default function TodoList() {
   };
 
   useEffect(() => {
+    console.log("ddd")
     fetchTodos();
   }, []);
 
