@@ -1,10 +1,21 @@
 import { a, defineData, type ClientSchema } from '@aws-amplify/backend';
+import { sayHello } from "../functions/say-hello/resource"
 
 const schema = a.schema({
   Todo: a.model({
       content: a.string(),
-      isDone: a.boolean()
-    })
+      isDone: a.boolean(),
+      isFinal:a.string()
+    }),
+
+    sayHello: a
+        .query()
+        .arguments({
+            name: a.string(),
+        })
+        .returns(a.string())
+        .handler(a.handler.function(sayHello))
+
     .authorization(allow => [allow.publicApiKey()])
 });
 
